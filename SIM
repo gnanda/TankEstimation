@@ -1,0 +1,22 @@
+#!/usr/bin/python
+
+import sys
+import TankEstimation
+
+#T 10000 5 5000
+
+
+def main():
+    # Get command line arguments
+    if not len(sys.argv) == 5:
+        print "Usage: ./SIM T N s RUNS"
+        exit(1)
+    t = sys.argv[1]
+    n = int(sys.argv[2])
+    s = int(sys.argv[3])
+    runs = int(sys.argv[4])
+
+    TankEstimation.run(t, n, s, runs)
+
+if __name__ == '__main__':
+    main()
